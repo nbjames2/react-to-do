@@ -15,6 +15,11 @@ class App extends Component {
     };
   }
 
+  deleteTodo(e) {
+    const deleting = this.state.todos.filter(item => !this.state.todos[e]);
+    console.log(deleting);
+  }
+
   handleChange(e) {
     this.setState({ newTodoDescription: e.target.value })
   }
